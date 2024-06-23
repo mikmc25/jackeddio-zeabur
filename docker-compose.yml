@@ -14,7 +14,7 @@ services:
     restart: unless-stopped
 
   jackett:
-    image: lscr.io/linuxserver/jackett:latest
+    image: docker.io/mikmc/jackettio:latest
     container_name: jackett
     environment:
       - AUTO_UPDATE=true #optional
@@ -29,7 +29,7 @@ services:
       - jackett-downloads:/downloads
 
   jackettio:
-    image: arvida42/jackettio:latest
+    image: mikmc/jackettio:latest
     container_name: jackettio
     env_file:
       - .env.production
